@@ -1,0 +1,120 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FocusFlow - Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-circle circle1"></div>
+    <div class="background-circle circle2"></div>
+
+    <div class="app">
+
+        <!-- Header -->
+        <div class="header">
+
+            <div>
+                <p class="small-title">WELCOME BACK 👋</p>
+                <h1>Focus<span>Flow</span></h1>
+                <p class="subtitle">Organize your day. Achieve your goals.</p>
+            </div>
+
+            <div class="date-box">
+                <div id="day">--</div>
+                <div id="date">--</div>
+            </div>
+
+        </div>
+
+
+        <!-- Add Task -->
+        <div class="add-task">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What do you want to accomplish?"
+            >
+
+            <button onclick="addTask()">
+                + Add Task
+            </button>
+
+        </div>
+
+
+        <!-- Statistics -->
+        <div class="stats">
+
+            <div class="stat-card">
+                <p>Total Tasks</p>
+                <h2 id="total">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Completed</p>
+                <h2 id="completed">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Pending</p>
+                <h2 id="pending">0</h2>
+            </div>
+
+        </div>
+
+
+        <!-- Filter -->
+        <div class="task-header">
+
+            <h2>My Tasks</h2>
+
+            <div class="filters">
+
+                <button onclick="filterTasks('all')" class="active">
+                    All
+                </button>
+
+                <button onclick="filterTasks('pending')">
+                    Pending
+                </button>
+
+                <button onclick="filterTasks('completed')">
+                    Completed
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Task List -->
+        <div id="taskList"></div>
+
+
+        <!-- Empty Message -->
+        <div id="emptyMessage" class="empty">
+
+            <div class="empty-icon">✨</div>
+
+            <h3>Your task list is clear!</h3>
+
+            <p>Add a task and start making progress.</p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
